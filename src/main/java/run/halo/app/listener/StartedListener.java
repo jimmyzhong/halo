@@ -1,7 +1,7 @@
 package run.halo.app.listener;
 
 import lombok.extern.slf4j.Slf4j;
-import org.flywaydb.core.Flyway;
+//import org.flywaydb.core.Flyway;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.event.ApplicationStartedEvent;
@@ -75,16 +75,16 @@ public class StartedListener implements ApplicationListener<ApplicationStartedEv
      * Migrate database.
      */
     private void migrate() {
-        log.info("Starting migrate database...");
-        Flyway flyway = Flyway
-                .configure()
-                .locations("classpath:/migration")
-                .baselineVersion("1")
-                .baselineOnMigrate(true)
-                .dataSource(url, username, password)
-                .load();
-        flyway.migrate();
-        log.info("Migrate database succeed.");
+//        log.info("Starting migrate database...");
+//        Flyway flyway = Flyway
+//                .configure()
+//                .locations("classpath:/migration")
+//                .baselineVersion("1")
+//                .baselineOnMigrate(true)
+//                .dataSource(url, username, password)
+//                .load();
+//        flyway.migrate();
+//        log.info("Migrate database succeed.");
     }
 
     /**
